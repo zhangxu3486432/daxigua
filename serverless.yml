@@ -1,0 +1,19 @@
+org: ${env:ORG}
+app: ${env:APP}
+stage: ${env:STAGE}
+
+component: website
+name: ${env:WEBSITE_NAME}
+
+inputs:
+  src: # 该项目的代码信息，参数参考执行目录
+    src: ./
+    index: index.html
+    error: index.html
+  region: ${env:REGION}
+  bucketName: ${name}-${stage}-${app}-${org}
+  protocol: https
+  replace: true # 是否覆盖式部署
+  disableErrorStatus: false # 是否禁用错误码，默认 false
+  autoSetupAcl: true # 自动配置 bucket 访问权限为 ”公有读私有写“
+  autoSetupPolicy: false # 自动配置 bucket 的 Policy 权限为 ”所有用户资源可读“
