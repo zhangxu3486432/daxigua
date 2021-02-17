@@ -35,7 +35,7 @@ let fruitSlowDown = false;
 let clickChangeFruit = false;
 
 // 广告链接：false 或为空字符串表示不会跳转到广告
-let adLink = 'https://7.adreamday.cn/#/';
+let adLink = '';
 
 // 修改网页标题：将 "合成大西瓜" 进行替换
 document.getElementsByTagName("title")[0].innerText = '合成清华北大';
